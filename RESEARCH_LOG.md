@@ -44,7 +44,17 @@ my assignment git must contain the following so help me so that i can provide a 
 ---
 
 ### Search queries
+-  Decision companion system
+-  Decision companion system git projects
+-  What is dss
+-  Is dss a model?
 -  types of laptops and their specifications
--  laptop purchase guide
+-  laptop purchase guide website
 -  what are the factors to check before buying laptops?
+-  Figma ui
+-  Mobile phone dataset kaggle
+-  Iphone mobile phone dataset csv files
+-  Travel dataset csv
+-  Travel location recommendation dataset csv
+-  Selecting best candidate for a job datasets
 
