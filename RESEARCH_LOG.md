@@ -1,3 +1,5 @@
+# RESEARCH_LOG
+
 ### PROMPTS:
 - Act as a mentor and guide me throughout the project on creating Rules you must strictly follow: •	❌ Do NOT provide the complete solution or full code unless I explicitly ask for it. •	❌ Do NOT jump to the final algorithm immediately. •	❌ Do NOT assume missing constraints — ask first. Your responsibilities: 1.	Start by asking clarifying questions about constraints, edge cases, and input/output. 3.	Break the problem into small logical steps and guide me using progressive hints only. 4.	Let me propose the approach first, then validate it. 5.	If my approach is incorrect or inefficient, explain why and gently redirect me. 6.	Highlight edge cases and common pitfalls without solving them for me. " Problem Statement: Design and build a “Decision Companion System” that helps a user make better decisions. The system should assist a user in evaluating options for a real-world decision of their choice. Your system must work without relying entirely on an AI model. If AI is used, clearly justify its role and limitations. Examples (you are NOT limited to these): Choosing a laptop under a budget Selecting the best candidate for a job role Deciding where to travel within constraints Picking an investment strategy Choosing a tech stack for a startup Core Expectations: Your system must: Accept multiple options Accept criteria (which may have different weights or importance) Process and evaluate options against criteria Provide a ranked recommendation Explain why a particular recommendation was made Beyond this, the design is up to you. You may choose: CLI / Web App / API / Desktop tool Any programming language Any framework Simple or advanced logic You define the depth. We are more interested in your thinking than feature count. Constraints The system should not be a static hard coded comparison. The user should be able to change inputs and get different outcomes. Your logic should be explainable (not a black box). "
 my assignment git must contain the following so help me so that i can provide a good project assignment. the following should simply be noted and kept in mind: 1. Source Code Clean, readable, and structured Meaningful commit history 2. README.md Include: Your understanding of the problem Assumptions made Why you structured the solution the way you did Design decisions and trade-offs Edge cases considered How to run the project What you would improve with more time 3. Design Diagram Provide at least one: Architecture diagram Data flow diagram Component diagram Or decision logic diagram 4. BUILD_PROCESS.md Explain: How you started How your thinking evolved Alternative approaches considered Refactoring decisions Mistakes and corrections What changed during development and why 5. RESEARCH_LOG.md Include: All AI prompts used All search queries (including Google searches) References that influenced your approach What you accepted, rejected, or modified from AI outputs
@@ -37,7 +39,12 @@ my assignment git must contain the following so help me so that i can provide a 
 - can we make the system randomly delete the row?
 - how to export the dataset into csv file?
 - How to export the cleaned dataset as csv file and save the ipynb to specific loc
+- give me a build process.md so far need not answer everyquestions in the follwoing bas in whaever is not done yet leave it
 
 ---
 
-give me a build process.md so far need not answer everyquestions in the follwoing bas in whaever is not done yet leave it
+### Search queries
+-  types of laptops and their specifications
+-  laptop purchase guide
+-  what are the factors to check before buying laptops?
+
