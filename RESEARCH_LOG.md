@@ -40,6 +40,110 @@ my assignment git must contain the following so help me so that i can provide a 
 - how to export the dataset into csv file?
 - How to export the cleaned dataset as csv file and save the ipynb to specific loc
 - give me a build process.md so far need not answer everyquestions in the follwoing bas in whaever is not done yet leave it
+- The project is a Decision Companion System for Laptop Selection website. This is NOT an e-commerce site, NOT flashy, and NOT marketing-heavy. The goal is clarity, explainability, and professionalism.
+1️⃣ Technical Constraints (STRICT)
+* Use only HTML and CSS/bootstrap
+* NO JavaScript logic
+* NO frameworks (no React, no Tailwind)
+* One single HTML file (`index.html`)
+* One single CSS file (`style.css`)
+* The HTML must contain structure only, not data or logic
+* All questions, scoring, and decision logic will be handled later in JavaScript (not in this task)
+2️⃣ Design Philosophy
+* Minimalist
+* Clean
+* Calm
+* Academic / professional
+* White space focused
+* Easy to read
+Avoid:
+* Heavy gradients
+* Loud colors
+* Icons everywhere
+* Card overload
+* Dark mode
+Inspiration keywords:
+* “decision support”
+* “explainable system”
+* “calm UI”
+* “Google-style simplicity”
+3️⃣ Color & Typography Rules
+🎨 Colors
+* Background: white or very light gray (#f9f9f9)
+* Primary text: near-black (#222 or #333)
+* Accent color: ONE muted accent (soft blue or soft green)
+* Borders: very light gray
+No more than 3 colors total.
+🔤 Typography
+* Sans-serif font (system font stack preferred)
+* Clear hierarchy:
+   * Page title
+   * Section titles
+   * Body text
+* No decorative fonts
+4️⃣ Website Structure (MANDATORY)
+The page must contain three main sections, all present in HTML but designed so that JavaScript can later show/hide them.
+🔹 Section 1: Landing / Intro
+Purpose: Calm entry point
+Contents:
+* Large heading: “Find Your Laptop”
+* Short subtitle (1 line): “A transparent decision companion to help you choose the right laptop.”
+* Primary button: “Let’s Get Started”
+Design:
+* Centered vertically and horizontally
+* Lots of white space
+* Button is simple, rounded, subtle hover effect
+🔹 Section 2: Questionnaire Container
+Purpose: Placeholder for dynamic questions
+Contents:
+* Section heading: “Your Preferences”
+* Short helper text: “Answer a few questions to help us understand what matters to you.”
+* Empty container div where questions will be injected later by JavaScript
+* Navigation buttons area:
+   * “Back”
+   * “Skip”
+   * “Continue”
+IMPORTANT:
+* Do NOT hard-code any questions
+* This section must visually support:
+   * Sliders
+   * Radio buttons
+   * Dropdowns (later)
+🔹 Section 3: Results Container
+Purpose: Display ranked laptops
+Contents:
+* Section heading: “Recommended Laptops”
+* Subtext: “Based on your preferences and constraints.”
+* Placeholder container for:
+   * Ranked laptop cards
+   * Explanation text
+Each result card should be styled for:
+* Laptop name
+* Score / rank
+* Short explanation paragraph
+No actual data — placeholders only.
+5️⃣ HTML Rules (VERY IMPORTANT)
+* Use semantic HTML:
+   * `<header>`, `<section>`, `<main>`
+* Use clear class names:
+   * `.landing`
+   * `.question-section`
+   * `.results-section`
+* NO inline styles
+* NO JavaScript inside HTML
+* The HTML must look “empty but ready”
+6️⃣ CSS Rules
+* Mobile-first
+* Max-width centered layout (e.g., 900–1100px)
+* Consistent spacing system
+* Soft borders
+* Subtle hover states
+* Buttons must look clickable but calm
+7️⃣ Output Format
+* Provide two code blocks only:
+   1. `index.html`
+   2. `style.css`;No explanations unless requested, Code must be clean, commented, and readable
+8️⃣ Final Goal Reminder:This UI is for an academic Decision Companion System, not a shopping site. The design must visually communicate:trust,clarity,explainability,neutralityGenerate the HTML and CSS now.
 
 ---
 
