@@ -7,6 +7,7 @@ The aim of this project is to build a Laptop Recommendation System that helps us
 ## Assumptions made:
 - The dataset used for this project are accurate and up to date.
 - Since the dataset does not contain a laptop weight column, portability is not directly considered in the recommendation logic.
+- The options are based on whats available in the dataset.
 - Users have a clear understanding of their approximate budget, which is treated as a primary (hard) constraint during recommendation.
 
 ## Structure of the solution:
