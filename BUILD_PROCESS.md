@@ -2,9 +2,7 @@
 
 ## 1. How I Started
 
-I began by carefully understanding the problem statement. The key requirement was to build a **Decision Companion System** that helps users make informed choices using **explainable logic**, without relying entirely on AI.
-
-After considering multiple example domains suggested in the assignment, I decided to work on a **Laptop Selection Decision System**, as it is:
+I began by carefully understanding the problem statement. The key requirement was to build a **Decision Companion System** that helps users make informed choices using explainable logic, without relying entirely on AI. Initially very confused but as i researched through different domains of topic I decided to work on a **Laptop Selection Decision System**, as it is:
 - Relatable to general users
 - Well-suited for multi-criteria decision making
 - Supported by publicly available datasets
