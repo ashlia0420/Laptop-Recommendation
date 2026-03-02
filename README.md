@@ -15,6 +15,18 @@ The aim of this project is to build a Laptop Recommendation System that helps us
 - Python was chosen because it is highly suitable for data processing and algorithmic logic. Using libraries like Pandas simplifies dataset cleaning, filtering, and scoring operations
 - FastAPI was used because it is fast, lightweight, and easy to connect with the frontend while automatically handling data validation. It keeps the recommendation logic separate from the UI and makes the system scalable for future enhancements.
 
+#### System Architecture
+The system follows a simple full-stack architecture:
+    Frontend: Vanilla JavaScript (ES modules)
+    Backend: FastAPI (Python)
+    Dataset: CSV loaded into memory at server startup
+
+The frontend collects user inputs and sends them to the backend API.
+The backend performs filtering, scoring, and explanation generation.
+The results are returned as JSON and rendered dynamically.
+
+
+
 ## Design decisions and trade-offs:
 - The system does not use AI or machine learning. Instead, it uses a clear scoring formula:
 score = Σ(normalized_value × weight) / Σ(weights) × 100
@@ -74,3 +86,4 @@ Works with VS Code Live Server too
 - host the website
 - better UI/Ux
 - Could add a feature that could fetch the nearest shop where the product is available.
+- tiered processor classifications derived from model names
