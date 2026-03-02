@@ -60,7 +60,7 @@ def health():
     }
 
 
-# ── Debug — remove before production ──────────────────────────
+# ── Debug — remove before production ─────────────────────────
 
 @app.get("/debug")
 def debug():
