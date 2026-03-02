@@ -1,19 +1,11 @@
-// ============================================================
-// js/state.js — UI State
-// ============================================================
-// Holds only the questionnaire navigation state and the
-// user's answers. No laptop data. No filtering. No scoring.
-//
-// lastResults stores the backend response for the export
-// feature — it is never processed or re-scored here.
-// ============================================================
+
 
 let _state = {
   currentQuestionIndex: 0,
-  hardConstraints:      {},   // { budget: 80000, os: 'Windows', ... }
-  weights:              {},   // { 'cpu_performance': 3, 'ram(GB)': 2, ... }
-  skipped:              [],   // question IDs the user skipped
-  lastResults:          [],   // raw array from backend, for export only
+  hardConstraints:      {},   
+  weights:              {},   
+  skipped:              [],   
+  lastResults:          [],   
 };
 
 // ── Getters ───────────────────────────────────────────────────

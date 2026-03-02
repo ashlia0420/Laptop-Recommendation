@@ -82,21 +82,6 @@
                 <!-- JavaScript will inject question markup here -->
                 <div class="question-container" id="question-container" aria-live="polite">
 
-                    <!-- ── Slot: slider question (example structure, no data) ── -->
-                    <div class="question-slot question-slot--slider" id="slot-slider">
-                        <label class="question-label" for="q-slider">
-                            Question label goes here
-                        </label>
-                        <p class="question-hint">Hint text goes here.</p>
-                        <div class="slider-wrap">
-                            <input class="form-range question-range" type="range" id="q-slider" min="0" max="100"
-                                value="50" />
-                            <div class="slider-legend">
-                                <span>Low</span>
-                                <span>High</span>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- ── Slot: radio question (example structure, no data) ── -->
                     <div class="question-slot question-slot--radio" id="slot-radio">
@@ -216,12 +201,7 @@
                         </div>
                         <div class="result-card__body">
                             <h3 class="result-card__name">Laptop Name Placeholder</h3>
-                            <!-- <div class="result-card__score-row">
-                                <div class="score-bar-wrap">
-                                    <div class="score-bar-fill" style="width: 64%"></div>
-                                </div>
-                                <span class="score-value">64 / 100</span>
-                            </div> -->
+                    
                             <p class="result-card__explanation">
                                 Explanation for the third result will appear here.
                             </p>
@@ -231,7 +211,6 @@
                 </div>
                 <!-- /results-list -->
 
-                <!-- Actions row -->
                 <div class="results-actions">
                     <button class="btn-ghost" id="btn-restart" type="button">← Start Over</button>
                     <button class="btn-primary" id="btn-export" type="button">Export Summary</button>
@@ -260,7 +239,7 @@
         </div>
     </footer>
 
-    <!-- Application entry point — ES module -->
+
     <script type="module" src="js/main.js"></script>
 </body>
 

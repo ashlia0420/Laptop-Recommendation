@@ -1,14 +1,4 @@
-// ============================================================
-// js/main.js — Application Orchestrator
-// ============================================================
-// Responsibilities:
-//   1. Wire all button events
-//   2. Step through the questionnaire
-//   3. Collect answers into a payload
-//   4. POST payload to /api/recommend
-//   5. Pass the response to uiController to render
-//
-// ============================================================
+
 
 import { QUESTIONS, IMPORTANCE_MAP } from './questions.js';
 
@@ -187,12 +177,7 @@ function _saveAnswer(q, answer) {
 
 // ── Backend call ───────────────────────────────────────────────
 
-/**
- * Collects the user's answers into a JSON payload,
- * POSTs it to /api/recommend, and renders the response.
- *
- * No decision logic runs here — the backend does everything.
- */
+
 async function _submit() {
   const hardConstraints = getHardConstraints();
   const softPreferences = getWeights();
