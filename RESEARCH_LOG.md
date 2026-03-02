@@ -332,3 +332,31 @@ hint: Please, commit your changes before merging.fatal: Exiting because of unfin
 -  Selecting best candidate for a job datasets
 - What is normalisation method used for dataset
 
+# References:
+Laptop Finder : Find the Laptop that suits your needs | 91mobiles.com
+Different Types of Laptops | Find Your Perfect Match
+Reliance Digital | www.reliancedigital.in
+laptop-guide/LAPTOP_GUIDE.md at main · ITClubPulchowk/laptop-guide · GitHub
+DataSets/laptops.csv at master · 37Degrees/DataSets · GitHub
+Laptops Dataset
+Weighted Scoring Model: Step-by-Step Implementation Guide
+
+# What accepted, rejected, or modified from AI outputs
+Accepted: 
+Detailed prompts were used to generate structured and modular code.
+AI-assisted generation of HTML, CSS, and JavaScript for the frontend helped accelerate UI development.
+Backend structure suggestions using Python (FastAPI) were accepted, especially for routing, request validation, and organizing the decision engine logic.
+Suggestions for separating filtering, scoring, and explanation logic into distinct components were adopted to improve clarity.
+
+Modified:
+- Generated code was frequently adjusted to fix logical errors, improve readability, and better align with the project’s requirements.
+- Some AI-generated scoring logic was simplified to maintain transparency and deterministic behavior.
+- Explanations were rewritten to be more user-friendly and benefit-focused rather than technical.
+- Architectural suggestions were refined to better fit the actual dataset structure and project constraints.
+- Error handling and type validation were strengthened beyond the initial generated output.
+
+Rejected:
+- A redesigned results page with a sidebar layout was generated but later removed because it complicated the interface and introduced layout inconsistencies.
+- Certain UI enhancements, such as adding a manual close option on summary tags, were rejected because they added unnecessary complexity without improving usability.
+- Some overly complex scoring or AI-based recommendation suggestions were not implemented to maintain the rule-based, explainable nature of the system.
+
