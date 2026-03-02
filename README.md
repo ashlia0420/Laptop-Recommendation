@@ -62,19 +62,16 @@ This provides a neutral default when you haven’t expressed any specific priori
 ## How to run the program:
 
 ### Backend Setup
-   -  Navigate to backend folder 
-        cd backend 
-    - Install dependencies 
-        pip install -r requirements.txt 
-    - Start the backend server
-         uvicorn app:app --reload
+cd backend                          # Navigate to backend folder 
+pip install -r requirements.txt     # Install dependencies 
+uvicorn app:app --reload            # Start the backend server
 note: API runs at http://localhost:8000. Debug endpoint: GET /debug.
 
 ### Frontend
-    - In another terminal navigate to frontend folder
-         frontend
-    - Start a simple HTTP server 
-        python -m http.server 5500
+cd frontend                         # Navigate to frontend folder 
+python -m http.server 5500          # Start a simple HTTP server 
+
+
 Works with VS Code Live Server too
 
 ---
