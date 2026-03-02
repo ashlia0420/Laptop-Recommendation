@@ -71,7 +71,6 @@ note: API runs at http://localhost:8000. Debug endpoint: GET /debug.
 cd frontend                         # Navigate to frontend folder 
 python -m http.server 5500          # Start a simple HTTP server 
 
-
 Works with VS Code Live Server too
 
 ---
