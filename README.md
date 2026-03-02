@@ -87,3 +87,4 @@ Works with VS Code Live Server too
 - better UI/Ux
 - Could add a feature that could fetch the nearest shop where the product is available.
 - tiered processor classifications derived from model names
+- use advanced normalisation technique such scoring  is limited to using numeric features( olumns)
