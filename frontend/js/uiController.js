@@ -1,10 +1,4 @@
-// ============================================================
-// js/uiController.js — DOM Controller
-// ============================================================
-// Renders UI. Reads answers. Shows messages.
-// Does NOT filter, score, rank, or explain anything.
-// Every result it renders came from the backend response.
-// ============================================================
+
 
 import { QUESTIONS } from './questions.js';
 
@@ -97,18 +91,6 @@ function _buildNumber(q, saved) {
   return wrap;
 }
 
-// function _buildSelect(q, saved) {
-//   const opts = q.options.map(o => {
-//     const sel = String(saved) === String(o.value) ? 'selected' : '';
-//     return `<option value="${_esc(String(o.value))}" ${sel}>${_esc(o.label)}</option>`;
-//   }).join('');
-//   const wrap = document.createElement('div');
-//   wrap.innerHTML = `
-//     <label class="question-label" for="q-${q.id}">${_esc(q.label)}</label>
-//     <p class="question-hint">${_esc(q.hint)}</p>
-//     <select class="question-select" id="q-${q.id}">${opts}</select>`;
-//   return wrap;
-// }
 function _buildSelect(q, saved) {
   // If no saved answer, start with a blank placeholder so the select
   // has no pre-selected value — forcing the user to actively choose
@@ -214,9 +196,7 @@ function _buildCard(r, rank) {
   const barWidth   = Math.max(score, scoreRaw > 0 ? 4 : 0);
   // const scoreLabel = scoreRaw > 0 ? `${score} / 100` : 'No score — sorted by price';
 
-  // Contribution pills — computed by backend, just rendered here
-  // const pillsHTML = _buildPills(r.feature_breakdown || {});
-
+  
   // Strength bullets
   const strengthsHTML = (r.strengths || [])
     .map(s => `<li class="explanation-item">${_esc(s)}</li>`)
@@ -261,20 +241,6 @@ function _buildCard(r, rank) {
   return article;
 }
 
-// function _buildPills(breakdown) {
-//   const top3 = Object.values(breakdown)
-//     .filter(d => d.contribution > 0)
-//     .sort((a, b) => b.contribution - a.contribution)
-//     .slice(0, 3);
-
-//   if (!top3.length) return '';
-
-//   const html = top3
-//     .map(d => `<span class="contribution-pill">${_esc(d.label)}: ${d.contribution}%</span>`)
-//     .join('');
-
-//   return `<div class="contribution-pills">${html}</div>`;
-// }
 
 // ── Preference summary tags ────────────────────────────────────
 
@@ -310,8 +276,6 @@ export function renderSummaryTags(hardConstraints, weights, skipped) {
     }
   }
 
-  //if (skipped.length)
-  //  tags.push(`${skipped.length} question${skipped.length > 1 ? 's' : ''} skipped`);
 
   if (!tags.length)
     tags.push('No preferences set');

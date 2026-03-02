@@ -32,7 +32,6 @@ RANK_LABELS = {
     5: "Possible match",
 }
 
-# Human-readable labels for each soft-preference field
 FIELD_LABELS: dict[str, str] = {
     "cpu_performance":     "Processing performance",
     "ram(GB)":             "RAM",
@@ -237,18 +236,6 @@ def _build_breakdown(
 
     return result
 
-# ── Benefit-focused explanation patterns ──────────────────────
-#
-# Maps each scored field to three tiers of human-readable benefit
-# descriptions. Explanations describe what the laptop does for the
-# user — never raw scores, never internal metrics.
-#
-# Structure per field:
-#   "low"    — benefit phrase when value is in the low tier
-#   "mid"    — benefit phrase when value is in the mid tier
-#   "high"   — benefit phrase when value is in the high tier
-#   "metric" — lambda: human-friendly value string shown in strengths
-#   "tiers"  — list of (min, max, tier_name) used to classify value
 
 _BENEFIT_PATTERNS: dict[str, dict] = {
     # All phrase values must be verb-led so that the template
@@ -431,58 +418,6 @@ def _tradeoffs(breakdown: dict, weights: dict[str, int]) -> list[str]:
     return warnings
 
 
-# def _explanation(
-#     row: pd.Series,
-#     rank: int,
-#     score: float,
-#     breakdown: dict,
-# ) -> str:
-#     """One-sentence plain-English summary. Deterministic, rule-based."""
-#     name = f"{_str(row.get('brand'))} {_str(row.get('model_name'))}".strip()
-
-#     if not breakdown:
-#         return f"{name} passed all your hard constraints and appears in results."
-
-#     top_field = max(breakdown, key=lambda f: breakdown[f]["contribution"])
-#     top_label = breakdown[top_field]["label"]
-
-#     if rank == 1:
-#         return (
-#             f"{name} is your top match ({score}/100) — "
-#             f"it leads especially on {top_label}."
-#         )
-#     return (
-#         f"{name} earned a {_score_word(score)} score of {score}/100, "
-#         f"with its strongest contribution from {top_label}."
-#     )
-
-
-# def _strengths(breakdown: dict) -> list[str]:
-#     """Up to 3 sentences about the highest-contributing features."""
-#     sentences = []
-#     top3 = sorted(breakdown.items(), key=lambda x: x[1]["contribution"], reverse=True)[:3]
-#     for field, data in top3:
-#         if data["contribution"] <= 0:
-#             continue
-#         tier = _tier(data["contribution"])
-#         fmt  = _fmt(field, data["raw_value"])
-#         sentences.append(
-#             f"{data['label']} {tier} contributes to this score — it has {fmt}."
-#         )
-#     return sentences
-
-
-# def _tradeoffs(breakdown: dict, weights: dict[str, int]) -> list[str]:
-#     """Warning for features the user rated important but this laptop scores low on."""
-#     warnings = []
-#     for field, data in breakdown.items():
-#         if weights.get(field, 0) >= 2 and data["normalized"] < 0.4:
-#             fmt = _fmt(field, data["raw_value"])
-#             warnings.append(
-#                 f"Note: {data['label']} is important to you, but this laptop "
-#                 f"only has {fmt}, which is below average."
-#             )
-#     return warnings
 
 
 # ── Private helpers ────────────────────────────────────────────
