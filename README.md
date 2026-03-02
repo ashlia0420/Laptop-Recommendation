@@ -16,11 +16,52 @@ The aim of this project is to build a Laptop Recommendation System that helps us
 - FastAPI was used because it is fast, lightweight, and easy to connect with the frontend while automatically handling data validation. It keeps the recommendation logic separate from the UI and makes the system scalable for future enhancements.
 
 ## Design decisions and trade-offs:
+- The system does not use AI or machine learning. Instead, it uses a clear scoring formula:
+score = Σ(normalized_value × weight) / Σ(weights) × 100
+Each laptop gets points based on how well it matches your priorities. The higher your priority (High, Medium, Low), the more that feature influences the score.
+Trade-off: The system cannot “learn” from past users or improve automatically over time. However, every score is fully explainable and will always produce the same result for the same inputs.
 
+-The laptop dataset (CSV file) is loaded once when the server starts and kept in memory. Every recommendation works from this in-memory copy.
+Trade-off: This makes the system simple and very fast, but the dataset is static. If the data changes, the server must be restarted.
+
+The frontend is built using plain JavaScript with ES modules. There is no React, Vue, Angular, or build system.
+
+Trade-off: UI updates must be handled manually in code. However, the structure stays simple, lightweight, and easy to understand — and it runs directly in the browser without extra tooling.
+
+-Normalization is done only on laptops that pass your hard constraints (like budget and minimum RAM).
+-A score of 100/100 does not mean “best laptop overall.” It means “best laptop among the ones that match your requirements.”
+- If you skip all soft preference questions, the system cannot calculate weighted scores. In that case, laptops are ranked from cheapest to most expensive within your budget.
+This provides a neutral default when you haven’t expressed any specific priorities.
+
+- Benefit-focused explanations – raw numbers are converted to plain-language tiers (low/mid/high) and described as real benefits, e.g., “handles demanding workloads and heavy multitasking with ease”.
 
 ## Edge cases considered:
+- No laptops match → friendly message instead of error.
+- Back navigation clears stale answers.
+- Zero-weight soft preferences are ignored.
+- Price formatting and same-price pools are handled gracefully.
+- OS matching is fuzzy.
+- “No minimum” answers (0) are not dropped.
 
 ## How to run the program:
+### Backend
+cd backend
+pip install -r requirements.txt
+uvicorn app:app --reload
 
+note: API runs at http://localhost:8000. Debug endpoint: GET /debug.
+
+### Frontend
+cd frontend
+python -m http.server 5500
+
+Open http://localhost:5500. Works with VS Code Live Server too
 
 ## Improvement if more time was available:
+- add pictures, links to buy, provide 3d view of the product.
+- Use AI for explanation
+- add chatbot for people assistance
+- add sidebar in results page and allow dynamic changing
+- host the website
+- better UI/Ux
+- Could add a feature that could fetch the nearest shop where the product is available.
