@@ -35,6 +35,8 @@ This provides a neutral default when you haven’t expressed any specific priori
 
 - Benefit-focused explanations – raw numbers are converted to plain-language tiers (low/mid/high) and described as real benefits, e.g., “handles demanding workloads and heavy multitasking with ease”.
 
+---
+
 ## Edge cases considered:
 - No laptops match → friendly message instead of error.
 - Back navigation clears stale answers.
@@ -43,20 +45,27 @@ This provides a neutral default when you haven’t expressed any specific priori
 - OS matching is fuzzy.
 - “No minimum” answers (0) are not dropped.
 
-## How to run the program:
-### Backend
-cd backend
-pip install -r requirements.txt
-uvicorn app:app --reload
+---
 
+## How to run the program:
+
+### Backend Setup
+   -  Navigate to backend folder 
+        cd backend 
+    - Install dependencies 
+        pip install -r requirements.txt 
+    - Start the backend server
+         uvicorn app:app --reload
 note: API runs at http://localhost:8000. Debug endpoint: GET /debug.
 
 ### Frontend
-cd frontend
-python -m http.server 5500
+    - In another terminal navigate to frontend folder
+         frontend
+    - Start a simple HTTP server 
+        python -m http.server 5500
+Works with VS Code Live Server too
 
-Open http://localhost:5500. Works with VS Code Live Server too
-
+---
 ## Improvement if more time was available:
 - add pictures, links to buy, provide 3d view of the product.
 - Use AI for explanation
